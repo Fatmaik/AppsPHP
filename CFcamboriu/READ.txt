@@ -1,0 +1,69 @@
+### PROBLEMAS PARA RESOLVER ###
+    
+    redimencionar todas as imagens
+1 - Associacao de todas as tabelas no DATABASE, com uma unica tabela para gerar valores em um unico select
+2 - tratamento de display de produtos a ser pesquisados por click no genero que for desejado
+
+
+
+
+// para testar esta aplicaçao, voce devera montar um database com os seguintes parametros:
+
+1 - nome do db: faramacia
+
+2 - deve possuir 5 tabelas, chamadas compra,clientes,medicamentos,saude e beleza respectivamente
+
+3 - a tabela compra deve possuir os seguintes constrins :
+    
+    create table compra(
+    id int not null auto_increment,
+    data date,
+    valor int,
+    unidades int,
+    entrega varchar(30),
+    idMedicamentos int,
+    idSaude int,
+    idBeleza int,
+    primary key(id),
+    foreign key(idMedicamentos) references medicamentos(id),
+    foreign Key(idSaude) references saude(id),
+    foreign key(idBeleza) references beleza(id)
+    )default charset = utf8;
+
+4 - as tabelas medicamentos,saude e beleza devem possuir os seguintes constrins:
+    
+    create table beleza(
+    id int not null auto_increment,
+    nome varchar(30),
+    genero varchar(30),
+    descricao_prod varchar(30),
+    marca varchar(30),
+    local_armazem varchar(40),
+    estoque int,
+    valor int,
+    primary key(id)
+    )default charset = utf8;
+
+5 - a tabela clientes deve possuir os seguintes constrins:
+
+    create table clientes(
+    id int not null auto_increment,
+    nome varchar(30),
+    sobrenome varchar(30),
+    email varchar(40),
+    senha varchar(32),
+    endereço varchar(40),
+    primary key(id)
+    )default charset = utf8;
+
+
+6 - exemplo de dados que iram ser inseridos nas table medicamentos, saude e beleza:
+
+insert into saude values
+(default, 'HammarHead', 'acessorios', 'Com isso voce nao escutara mais nada', 'Hammer', 'css/EstiloLV/img/saude/cabelo/', 10, 6.20),
+(default, 'Corega', 'dentadura', 'Parecem Reais', 'Dente', 'css/EstiloLV/img/saude/dentadura/', 10, 12.27),
+(default, 'Dilatador Nasal', 'nasal', 'Abrir o Narigao', 'Sml', 'css/EstiloLV/img/saude/nasal/', 10, 10.27),
+(default, 'Preservativo', 'preservativo', 'Preciso nem Comentar ne?', 'jontex', 'css/EstiloLV/img/saude/preservativo/', 10, 3.50),
+(default, 'ProtetorSolar', 'ProtetorSolar', 'Para sol quente', 'Solar', 'css/EstiloLV/img/saude/ProtetorSolar/', 10, 60.50),
+(default, 'Avene', 'ProtetorSolar', 'sol morno', 'avene', 'css/EstiloLV/img/saude/ProtetorSolar/', 10, 60.45),
+(default, 'Renu', 'lente', 'Limpa Lentes', 'renu', 'css/EstiloLV/img/saude/lente/', 10, 60.45);

@@ -1,0 +1,160 @@
+body{
+    margin: 0; padding: 0;
+}
+
+/* inicio estilo header */
+header div#menu{
+    height: 6.7vmin;
+    background-color:#009a3d;
+}
+
+header div#menu div#links{
+    text-align: center;
+    padding-top: 2vmin;
+}
+
+header div#menu div#links a{
+    text-decoration: none;
+    color: white;
+    padding: 2vmin;
+    font-size: 2.2vmin;
+    border-radius: 4px;
+}
+
+header div#menu div#links a:hover{
+    background: #FF8800;
+}
+/* ============== fim ================= */
+
+
+/* inicio estilo do corpo */
+
+main{
+    margin: auto;
+    width: 140vmin;
+    background-color: #f9f9f9;
+    height: 87vmin;
+}
+
+#bandeira{
+    margin-left: 5vmin;
+    margin-top: 5vmin;
+    width: 70vmin;
+}
+/* ================ fim =====================
+
+inicio estilo das tabelas */
+div#div_btns{
+    margin-left: 65vmin;
+}
+
+div#div_btns #bnt_cadastro{
+    padding: 2vmin;
+    background-color: #239e23;
+    color: white;
+    font-size: 2vmin;
+    border-radius: 4px;
+}
+
+div#div_btns #bnt_cadastro:hover{
+    cursor: pointer;
+}
+
+#bnt_volta{
+    margin-top: 14vmin;
+    padding: 2vmin;
+    background-color: #239e23;
+    color: white;
+    font-size: 2vmin;
+    border-radius: 4px;
+    margin-left: 53vmin;
+}
+
+legend{
+    margin-top: 3vmin;
+    margin-left: 4vmin;
+    font-size: 3vmin;
+    color: #3f3d3d;
+}
+
+legend#fieldset_cadastro{
+    margin-left: 22vmin;
+}
+
+table{
+    width: 140vmin;
+}
+
+table td{
+    text-align: center;
+}
+
+tr:nth-child(even) {background: #FFF}
+tr:nth-child(odd) {background: #EEE}
+
+main div#menu{
+    width: 100vw;
+    height: 10vmin;
+    background-color: green;
+}
+
+/* estilo para no maximo 6 inputs */
+form{
+    margin: auto;
+    width: 96vmin;
+    margin-top: 50px;
+    /* background: rebeccapurple; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+form select{
+    width: 45.5vmin;
+    height: 4.5vmin;
+    font-size: 2.2vmin;
+    padding-left: 13vmin;
+    color: #3f3d3d;
+}
+form div#inputs_right{
+    margin-left: 4vmin;
+}
+
+form input{
+    margin: auto;
+    text-align: center;
+    width: 45vmin;
+    height: 4vmin;
+    border-radius: 4px;
+    font-size: 2.2vmin;
+}
+
+form label#data_entrada{
+    margin-left: -11.8vmin;
+}
+
+form label#data_saida{
+    margin-left: -10.2vmin;
+}
+
+/* =============== END ================== */
+form button{
+    width: 95vmin;
+    height: 6vmin;
+    background-color: rgba(35, 158, 35, 0.95);
+    color: white;
+    border-radius: 4px;
+    font-size: 3vmin;
+}
+
+footer{
+    margin-top: 3vmin;
+    height: 5vmin;
+    background-color: #e98b30
+}
+
+footer p{
+    color: #f9f9f9;
+    text-align: center;
+    line-height: 2;
+}
