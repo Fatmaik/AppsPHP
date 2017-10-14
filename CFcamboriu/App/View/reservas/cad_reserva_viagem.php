@@ -1,6 +1,7 @@
 <img id="bandeira"src="/Assets/images/bandeira1.png" alt="">
-<a href="/reservas"><button id="bnt_volta">Voltar</button></a><br><br>
-
+<div id="div_btns">
+    <a href="/reservas"><button id="bnt_cadastro">Voltar</button></a><br><br>
+</div>
 <legend id="fieldset_cadastro">Cadastro de Reserva para Viagens </legend>
 <form action="">
     <div id="inputs_left">

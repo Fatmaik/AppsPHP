@@ -46,6 +46,8 @@ main{
 inicio estilo das tabelas */
 div#div_btns{
     margin-left: 65vmin;
+    /* background: #e98b30; */
+    text-align: end;
 }
 
 div#div_btns #bnt_cadastro{

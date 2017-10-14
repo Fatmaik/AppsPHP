@@ -1,8 +1,9 @@
 <img id="bandeira"src="/Assets/images/bandeira1.png" alt="">
 <div id="div_btns">
-    <a href="/reservas"><button id="bnt_cadastro">Voltar</button></a><br><br>
+    <a href="/condutores"><button id="bnt_cadastro">Voltar</button></a><br><br>
 </div>
-<legend id="fieldset_cadastro">Cadastro de Reservas Comuns </legend>
+
+<legend id="fieldset_cadastro">Cadastro de Condutores </legend>
 <form action="">
     <div id="inputs_left">
         <input type="text" name="id_veiculo'" required placeholder="Codigo do Veiculo"><br><br>

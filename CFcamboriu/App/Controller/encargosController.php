@@ -18,6 +18,6 @@ class encargosController extends Controller{
     }
 
     public function cad_licenciamentos() {
-        $this->loadTemplate("encargos/cad_licencimento");
+        $this->loadTemplate("encargos/cad_licenciamentos");
     }
 }

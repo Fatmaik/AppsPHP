@@ -17,8 +17,8 @@
                 <a href="/veiculos">Veículos</a>
                 <a href="/reservas">Reservas de Veiculos</a>
                 <a href="/encargos">Encargos do Veículo</a>
-                <a href="">Condutores</a>
-                <a href="">Fornecedores</a>
+                <a href="/condutores">Condutores</a>
+                <a href="/fornecedores">Fornecedores</a>
                 <a href="/home/sair">Sair</a>
             </div>
         </div>

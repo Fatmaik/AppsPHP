@@ -1,6 +1,7 @@
 <img id="bandeira"src="/Assets/images/bandeira1.png" alt="">
-<a href="/encargos"><button id="bnt_volta">Voltar</button></a><br><br>
-
+<div id="div_btns">
+    <a href="/encargos"><button id="bnt_cadastro">Voltar</button></a><br><br>
+</div>
 <legend id="fieldset_cadastro">Cadastro de Multas </legend>
 <form action="">
     <div id="inputs_left">
