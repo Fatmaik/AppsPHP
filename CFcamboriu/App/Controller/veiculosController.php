@@ -39,7 +39,7 @@ class veiculosController extends Controller{
         $this->us->getSession();
 
         $dados["fornecedor"] = $this->table->Select("tb_fornecedores");
-        $dados['veiculos'] = $this->table->Select("tb_veiculos");
+        $dados["veiculos"] = $this->table->Select("tb_veiculos");
 
         if(isset($_POST["id_veiculo"])) {
             // dados passados para o insert da tabela aabastecimentos
@@ -64,12 +64,12 @@ class veiculosController extends Controller{
         $this->us->getSession();
 
         $dados["fornecedor"] = $this->table->Select("tb_fornecedores");
-        $dados['veiculos'] = $this->table->Select("tb_veiculos");
+        $dados["veiculos"] = $this->table->Select("tb_veiculos");
 
-        if(isset($_POST["id_veiculo"])) {
+        if(isset($_POST["tb_veiculos_id_veiculo"])) {
             // dados passados para o insert da tabela aabastecimentos
             $dados_insert = array(
-                "tb_veiculos_id_veiculo"=>$_POST["id_veiculo"],
+                "tb_veiculos_id_veiculo"=>$_POST["tb_veiculos_id_veiculo"],
                 "data_entrada"=>$_POST["data_entrada"],
                 "data_saida"=>$_POST["data_saida"],
                 "valor_gasto"=> $_POST["valor_gasto"],
@@ -78,7 +78,7 @@ class veiculosController extends Controller{
                 "tb_fornecedores_id_fornecedor"=>$_POST["tb_fornecedor_id_fornecedor"]
             );
             $this->table->insert("tb_manutencoes", $dados_insert);
-            // header("location: /veiculos");
+            header("location: /veiculos");
         }
         $this->loadTemplate("veiculos/cad_manutencao", $dados);
     }

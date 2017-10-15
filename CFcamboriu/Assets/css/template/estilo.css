@@ -45,9 +45,9 @@ main{
 
 inicio estilo das tabelas */
 div#div_btns{
-    margin-left: 65vmin;
-    /* background: #e98b30; */
     text-align: end;
+    margin-right: 2vmin;
+    /* background: rebeccapurple; */
 }
 
 div#div_btns #bnt_cadastro{
@@ -62,18 +62,8 @@ div#div_btns #bnt_cadastro:hover{
     cursor: pointer;
 }
 
-#bnt_volta{
-    margin-top: 14vmin;
-    padding: 2vmin;
-    background-color: #239e23;
-    color: white;
-    font-size: 2vmin;
-    border-radius: 4px;
-    margin-left: 53vmin;
-}
-
 legend{
-    margin-top: 3vmin;
+    margin-top: 2vmin;
     margin-left: 4vmin;
     font-size: 3vmin;
     color: #3f3d3d;
@@ -104,7 +94,7 @@ main div#menu{
 form{
     margin: auto;
     width: 96vmin;
-    margin-top: 50px;
+    margin-top: 20px;
     /* background: rebeccapurple; */
     display: flex;
     flex-direction: row;
@@ -114,9 +104,8 @@ form{
 form select{
     width: 45.5vmin;
     height: 4.5vmin;
-    font-size: 2.2vmin;
     padding-left: 13vmin;
-    color: #3f3d3d;
+    color: #707070;
 }
 form div#inputs_right{
     margin-left: 4vmin;
@@ -128,15 +117,7 @@ form input{
     width: 45vmin;
     height: 4vmin;
     border-radius: 4px;
-    font-size: 2.2vmin;
-}
-
-form label#data_entrada{
-    margin-left: -11.8vmin;
-}
-
-form label#data_saida{
-    margin-left: -10.2vmin;
+    font-size: 1.5vmin;
 }
 
 /* =============== END ================== */

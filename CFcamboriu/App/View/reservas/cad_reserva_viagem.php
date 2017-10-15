@@ -3,6 +3,7 @@
     <a href="/reservas"><button id="bnt_cadastro">Voltar</button></a><br><br>
 </div>
 <legend id="fieldset_cadastro">Cadastro de Reserva para Viagens </legend>
+
 <form action="">
     <div id="inputs_left">
         <input type="text" name="codigo_veiculo" required placeholder="Codigo do Veiculo"><br><br>

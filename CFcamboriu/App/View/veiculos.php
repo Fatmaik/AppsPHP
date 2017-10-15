@@ -1,4 +1,4 @@
-<img id="bandeira" src="/Assets/images/bandeira1.png" alt=""><br><br>
+<img id="bandeira" src="/Assets/images/bandeira1.png" alt="">
 <div id="div_btns">
     <a href="veiculos/cad_veiculos"><button id="bnt_cadastro"> Cadastrar Veículos</button></a>
     <a href="veiculos/cad_abastecimento"><button id="bnt_cadastro"> Cadastrar Abastecimento</button></a>

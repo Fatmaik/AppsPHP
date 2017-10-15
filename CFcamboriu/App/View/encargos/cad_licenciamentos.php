@@ -5,16 +5,25 @@
 <legend id="fieldset_cadastro">Cadastro de Licenciamentos</legend>
 <form action="">
     <div id="inputs_left">
-        <input type="text" name="codigo_veiculo" required placeholder="Codigo do Veiculo"><br><br>
-        <input type="text" name="id_fornecedor" required placeholder="Fornecedor do Serviço"><br><br>
-        <input type="text" name="data_entrada" required placeholder="Data da Entrada"><br><br>
-        <input type="text" name="data_saida" required placeholder="Data da Saída"><br><br>
+        <label for="id_veiculo">Veículo</label><br>
+        <select name="id_veiculo" id="veiculo">
+            <option value="">Selecione o Veículo</option>
+            <?php foreach($veiculos as $info):?>
+                <option value="<?php echo $info["id_veiculo"];?>" name="item"><?php echo $info["placa"];?></option>
+            <?php endforeach;?>
+        </select><br><br>
+
+        <label for="valor_total">Valor Total</label><br>
+        <input type="number" stap=0,01 name="valor_total" required placeholder="ex: 500,00"><br><br>
+
     </div>
 
     <div id="inputs_right">
-        <input type="text" name="descricao_servico" required placeholder="Descrição do Serviço"><br><br>
-        <input type="text" name="observacoes" required placeholder="Observações"><br><br>
-        <input type="text" name="valor_gasto" required placeholder="Valor Gasto"><br><br> 
+        <label for="vencimento">Vencimento</label><br>
+        <input type="date" name="vencimento" required placeholder="Fornecedor do Serviço"><br><br>
+
+        <label for="status_pagamento">Status do pagamento</label><br>
+        <input type="text" name="status_pagamento" required placeholder="ex: pagamento pendente"><br><br>
     </div><br><br><br>
     <a href="/encargos"><button>Enviar</button></a><br><br><br>
 </form>

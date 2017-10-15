@@ -16,6 +16,9 @@ class homeController extends Controller{
         // $tabelas = new Tabelas();
         // $dadps["veiculos"] = $tabelas->Insert("tb_veiculos");
         // $this->loadTemplate("cad_veiculos", $dados);]
+        // acessando o session logado, sem login o user é redirecionado ao index
+        // $this->us->getSession();
+
         $this->loadTemplate("inicio");
     }
 

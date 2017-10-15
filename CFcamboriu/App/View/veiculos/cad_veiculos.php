@@ -5,13 +5,21 @@
 <legend id="fieldset_cadastro">Cadastro de Veículos </legend>
 <form action="" method="POST">
     <div id="inputs_left">
-        <input type="text" name="modelo" required placeholder="Modelo"><br><br>
+        <label for="modelo">Modelo</label><br>
+        <input type="text" name="modelo" required placeholder="ex: Palio"><br><br>
+
+        <label for="placa">Placa</label><br>
         <input type="text" name="placa" required placeholder="Placa"><br><br>
-        <input type="text" name="marca" required placeholder="Marca"><br><br>
+
+        <label for="marca">Marca</label><br>
+        <input type="text" name="marca" required placeholder="ex: Fiat"><br><br>
     </div>
     <div id="inputs_right">
+        <label for="chassi">Chassi</label><br>
         <input type="text" name="chassi" required placeholder="Chassi"><br><br>
-        <input type="text" name="ano" required placeholder="Ano"><br><br>
+
+        <label for="ano">Ano</label><br>
+        <input type="text" name="ano" required placeholder="ex: 2016"><br><br>
     </div>
     <a href="/veiculos"><button>Enviar</button></a><br><br>
 </form>

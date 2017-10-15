@@ -3,17 +3,32 @@
     <a href="/fornecedores"><button id="bnt_cadastro">Voltar</button></a><br><br>
 </div>
 <legend id="fieldset_cadastro">Cadastro de Fornecedores </legend>
-<form action="">
+<form action="" method="POST">
     <div id="inputs_left">
-        <input type="text" name="id_veiculo'" required placeholder="Codigo do Veiculo"><br><br>
-        <input type="text" name="data" required placeholder="Data"><br><br>
-        <input type="text" name="km_inicial" required placeholder="Km Inicial"><br><br>
-        <input type="text" name="id_condutor" required placeholder="Condutor"><br><br>
+        <label for="nome">Nome</label><br>
+        <input type="text" name="nome" required><br><br>
+
+        <label for="endereco">Endereço</label><br>
+        <input type="text" name="endereco" required><br><br>
+
+        <label for="codigo_fornecedor">Código do fornecedor</label><br>
+        <input type="text" name="codigo_fornecedor" required placeholder="ex: Ipiranga 01"><br><br>
+
+        <label for="cnpj">CNPJ</label><br>
+        <input type="text" name="cnpj"><br><br>
     </div>
     <div id="inputs_right">
-        <input type="text" name="periodo_reservado" required placeholder="Periodo Reservado"><br><br>
-        <input type="text" name="secretaria'" required placeholder="Secretaria"><br><br>
-        <input type="text" name="funcionario" required placeholder="funcionario"><br><br>
+        <label for="telefone">Telefone</label><br>
+        <input type="text" name="telefone"><br><br>
+
+        <label for="banco">Banco</label><br>
+        <input type="text" name="banco"><br><br>
+
+        <label for="agencia">Agencia</label><br>
+        <input type="text" name="agencia"><br><br>
+
+        <label for="conta">Conta</label><br>
+        <input type="text" name="conta"><br><br>
     </div><br><br><br>
-    <a href="/reserva"><button>Enviar</button></a><br><br>
+    <a href="/fornecedores"><button>Enviar</button></a><br><br>
 </form>

@@ -15,10 +15,10 @@
             <div id="links">
                 <a href="/home/inicio">Início</a>
                 <a href="/veiculos">Veículos</a>
-                <a href="/reservas">Reservas de Veiculos</a>
-                <a href="/encargos">Encargos do Veículo</a>
                 <a href="/condutores">Condutores</a>
                 <a href="/fornecedores">Fornecedores</a>
+                <a href="/reservas">Reservas de Veiculos</a>
+                <a href="/encargos">Encargos do Veículo</a>
                 <a href="/home/sair">Sair</a>
             </div>
         </div>

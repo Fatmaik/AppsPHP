@@ -4,17 +4,21 @@
 </div>
 
 <legend id="fieldset_cadastro">Cadastro de Condutores </legend>
-<form action="">
+<form action="" method="POST">
     <div id="inputs_left">
-        <input type="text" name="id_veiculo'" required placeholder="Codigo do Veiculo"><br><br>
-        <input type="text" name="data" required placeholder="Data"><br><br>
-        <input type="text" name="km_inicial" required placeholder="Km Inicial"><br><br>
-        <input type="text" name="id_condutor" required placeholder="Condutor"><br><br>
+        <label for="nome">Nome</label></label><br>
+        <input type="text" name="nome" required><br><br>
+
+        <label for="habilitacao">Habilitação</label><br>
+        <input type="text" name="habilitacao" required placeholder="número do registro"><br><br>
     </div>
     <div id="inputs_right">
-        <input type="text" name="periodo_reservado" required placeholder="Periodo Reservado"><br><br>
-        <input type="text" name="secretaria'" required placeholder="Secretaria"><br><br>
-        <input type="text" name="funcionario" required placeholder="funcionario"><br><br>
+        <label for="categoria">Categoria</label></label><br>
+        <input type="text" name="categoria" required placeholder="ex:AB"><br><br>
+
+        <label for="data_vencimento">Data de Vencimento</label></label><br>
+        <input type="date" name="data_vencimento" required><br><br>
+
     </div><br><br><br>
     <a href="/reserva"><button>Enviar</button></a><br><br>
 </form>
