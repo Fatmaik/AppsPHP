@@ -23,21 +23,24 @@ class encargosController extends Controller{
         $this->us->getSession();
 
         $dados["veiculos"] = $this->table->Select("tb_veiculos");
+        $dados["reservas"] = $this->table->Select("tb_reservas");
 
         if(isset($_POST['data'])) {
             $dados_insert = array(
                 "data"=>$_POST["data"],
-                "id_veiculo"=>$_POST["id_veiculo"],
+                "placa"=>$_POST["placa"],
+                "tb_reserva_id_reserva"=>$_POST["tb_reserva_id_reserva"],
                 "valor"=>$_POST["valor"],
                 "pdf_multa"=>$_FILES['name'],
                 "local"=>$_POST["local"],
                 "nivel"=>$_POST["nivel"],
-                "infracao"=>$_POST["infracao"],
+                "infracao"=>$_POST["infracao"]
             );
+
             $this->table->insert("tb_multas", $dados_insert);
 
             // armazenar os arquivos no diretorio desejado
-            move_uploaded_file($file['tmp_name'], '/Assets/pdf/'.$file['name']);
+            // move_uploaded_file($file['tmp_name'], '/Assets/pdf/'.$file['name']);
 
             // header("location: /encargos");
         }
@@ -55,6 +58,18 @@ class encargosController extends Controller{
         // acessando o session logado, sem login o user é redirecionado ao index
         $this->us->getSession();
 
-        $this->loadTemplate("encargos/cad_licenciamentos");
+        $dados["veiculos"] = $this->table->Select("tb_veiculos");
+
+        if(isset($_POST['id_veiculo'])) {
+            $dados_insert = array(
+                "tb_veiculos_id_veiculo"=>$_POST["id_veiculo"],
+                "valor_total"=>$_POST["valor_total"],
+                "vencimento"=>$_POST["vencimento"],
+                "status_pagamento"=>$_POST["status_pagamento"]
+            );
+            $this->table->insert("tb_licenciamentos", $dados_insert);
+            // header("location: /reservas");
+        }
+        $this->loadTemplate("encargos/cad_licenciamentos", $dados);
     }
 }

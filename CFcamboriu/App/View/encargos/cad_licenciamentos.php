@@ -5,7 +5,7 @@
 <legend id="fieldset_cadastro">Cadastro de Licenciamentos</legend>
 <form action="">
     <div id="inputs_left">
-        <label for="id_veiculo">Veículo</label><br>
+        <label for="tb_veiculos_id_veiculo">Veículo</label><br>
         <select name="id_veiculo" id="veiculo">
             <option value="">Selecione o Veículo</option>
             <?php foreach($veiculos as $info):?>
@@ -27,3 +27,4 @@
     </div><br><br><br>
     <a href="/encargos"><button>Enviar</button></a><br><br><br>
 </form>
+

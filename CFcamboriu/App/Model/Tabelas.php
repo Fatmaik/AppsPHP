@@ -32,7 +32,7 @@ class Tabelas extends Connect{
     // metodo acha o item especifico que foi escolhido no menu de produtos
     public function filtro($tbname, $genero) {
         $array = array();
-        $query = $this->dbase->query("SELECT * FROM $tbname WHERE genero = '$genero' " );
+        $query = $this->dbase->query("SELECT funcionatio FROM $tbname WHERE genero = '$genero' " );
         $array = $query->fetchAll(\PDO::FETCH_ASSOC);
         return $array;
     }
