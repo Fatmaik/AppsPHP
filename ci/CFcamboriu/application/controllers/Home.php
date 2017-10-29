@@ -36,6 +36,7 @@ class Home extends CI_Controller {
     }
     
     public function inicio() {
+        echo "test";
         $this->template->load('Template', 'inicio');
     }
 
