@@ -1,6 +1,6 @@
 <?php
-
-class UserLogin extends Tabelas{
+defined('BASEPATH') OR exit('No direct script access allowed');
+class UserLogin_model extends CI_MODEL{
     protected $user;
     protected $password;
 
@@ -37,7 +37,7 @@ class UserLogin extends Tabelas{
     public function getSession() {
         if($_SESSION["logado"] != "true") {
             session_destroy();
-            header("location: /index.php");
+            redirect('/index');
         }
     }
 }

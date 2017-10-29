@@ -1,4 +1,4 @@
-<img id="bandeira" src="/Assets/images/bandeira1.png" alt="">
+<img id="bandeira" src="<?php echo base_url('/assets/images/bandeira1.png')?>" alt="">
 <div id="div_btns">
 <?php if($_SESSION['nivel'] == 5):?>
     <a href="veiculos/cad_veiculos"><button id="bnt_cadastro"> Cadastrar Veículos</button></a>

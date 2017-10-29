@@ -6,23 +6,41 @@ class Tabelas_model extends CI_Model{
 
     public function __construct() {
         parent::__construct();
+        $this->load->database();
     }
 
-    public function login($user, $password) {
-        $array = array();
-        $query = $this->db->prepare("SELECT * from usuarios WHERE user = :user and password = :password ");
-        $query->bindValue(":user", $user);
-        $query->bindValue(":password", $password);
-        $query->execute();
-        $array = $query->fetchAll(PDO::FETCH_ASSOC);
-        return $array;
+    // metodo para saber se o usuarui esta logado
+    public function getSession() {
+        if($_SESSION["logado"] != "true") {
+            session_destroy();
+            redirect('/index');
+        }
+    }
+    // public function login($user, $password) {
+    //     $array = array();
+    //     $query = $this->db->get('usuarios', " WHERE user = :user and password = :password ");
+    //     $query->bindValue(":user", $user);
+    //     $query->bindValue(":password", $password);
+    //     $query->execute();
+    //     $array = $query->fetchAll(PDO::FETCH_ASSOC);
+    //     return $array;
+    // }
+
+    function login() {
+        $this->db->where('user', $this->input->post('user_login'));
+        $this->db->where('password', md5($this->input->post('user_password')));
+
+        $query = $this->db->get('usuarios');
+
+        if ($query->num_rows == 1) {
+            return true; // RETORNA VERDADEIRO
+        }
+        return $query->result_array();
     }
 
-    public function Select($tbname) {
-        $array = array();
-        $query = $this->dbase->query("SELECT * FROM $tbname");
-        $array = $query->fetchAll(\PDO::FETCH_ASSOC);
-        return $array;
+    public function Select($tbname = null) {
+        $query = $this->db->get("$tbname");
+        return $query->result_array();
     }
 
     // metodo pegando placa do veiculo reservado {
@@ -92,7 +110,7 @@ class Tabelas_model extends CI_Model{
     // funcao que receve o possivel responsavel vindo do metodo findResponsavel
     public function JoinPlacaManutencoes() {
         $array = array();
-        $query = $this->dbase->query("SELECT veiculos.placa, 
+        $query = $this->db->query("SELECT veiculos.placa, 
             manutencoes.data_entrada, 
             manutencoes.data_saida, 
             manutencoes.valor_gasto, 
@@ -104,15 +122,13 @@ class Tabelas_model extends CI_Model{
             on manutencoes.id_veiculo = veiculos.id_veiculo
             join fornecedores on manutencoes.id_fornecedor = fornecedores.id_fornecedor;
         ");
-        $array = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        return $array;
+        return $query->result_array();
     }
 
     // metodo para achar manutencoes do veiculo especificado no parametro placa
     public function manutencoesUnitarias($placa = null) {
         $array = array();
-        $query = $this->dbase->query("SELECT manutencoes.*, 
+        $query = $this->db->query("SELECT manutencoes.*, 
             veiculos.placa, 
             fornecedores.nome 
             from manutencoes join veiculos 
@@ -138,9 +154,11 @@ class Tabelas_model extends CI_Model{
     }
 
     // funcao que receve o possivel responsavel vindo do metodo findResponsavel
+    #### controllers utilizando ####
+    // | Veiculos
     public function JoinPlacaAbastecimentos() {
         $array = array();
-        $query = $this->dbase->query("SELECT veiculos.placa, 
+        $query = $this->db->query("SELECT veiculos.placa, 
             abastecimentos.data_abastecimento, 
             abastecimentos.tipo_combustivel, 
             abastecimentos.valor_total, 
@@ -153,9 +171,7 @@ class Tabelas_model extends CI_Model{
             on abastecimentos.id_veiculo = veiculos.id_veiculo
             join fornecedores on abastecimentos.id_fornecedor = fornecedores.id_fornecedor;
         ");
-        $array = $query->fetchAll(PDO::FETCH_ASSOC);
-
-        return $array;
+        return $query->result_array();
     }
 
     // metodo que acha o possivel responsavel pela multa

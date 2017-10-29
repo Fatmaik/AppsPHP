@@ -10,12 +10,14 @@ class Home extends CI_Controller {
     }
 
 	public function index() {
-
         if(isset($_POST["user_login"])) {
             $user = addslashes($_POST["user_login"]);
             $password = addslashes(md5($_POST["user_password"]));
 
-            $usuarios_info = $this->Tabelas->login($user, $password);
+            $usuarios_info = $this->Tabelas->login();
+            echo "<pre>";
+                print_r($usuarios_info);
+            echo"</pre>";
             foreach($usuarios_info as $info) {
                 $userLogin = $info["user"];
                 $userPassword = $info["password"];
@@ -25,18 +27,19 @@ class Home extends CI_Controller {
 
                 if($user == $userLogin && $password == $userPassword) {
                     $_SESSION["logado"] = "true";
-                    header("location: /home/inicio");
+                    redirect("/home/inicio");
                 }else{
                     $_SESSION["logado"] = "false";
                 }
             };
         };
+
 		$this->load->view('login');
     }
-    
+
     public function inicio() {
-        echo "test";
-        $this->template->load('Template', 'inicio');
+        $dados['viewName'] = 'inicio';
+        $this->load->view('Template', $dados);
     }
 
     // public function sair() {
