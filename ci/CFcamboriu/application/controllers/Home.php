@@ -31,11 +31,12 @@ class Home extends CI_Controller {
         //         }
         //     };
         // };
+        echo "tes";
 		$this->load->view('login');
     }
     
     public function inicio() {
-        $this->load->view('Template');
+        $this->template->load('Template', 'inicio');
     }
 
     // public function sair() {

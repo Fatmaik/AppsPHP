@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CF.Camboriu</title>
-    <link rel="stylesheet" href="assets/css/main/login.css">
+    <link rel="stylesheet" href="/assets/css/template/estilo.css">
     <script src="/Assets/js/library/jquery.js"></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
     </header>
 
     <main class="main">
-            <?php $this->load->view('inicio');?>
+            <?php $this->Template->load('inicio');?>
         </div> <br>
     </main>
 
