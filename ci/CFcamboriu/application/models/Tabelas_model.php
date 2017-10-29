@@ -10,7 +10,7 @@ class Tabelas_model extends CI_Model{
 
     public function login($user, $password) {
         $array = array();
-        $query = $this->dbase->prepare("SELECT * from usuarios WHERE user = :user and password = :password ");
+        $query = $this->db->prepare("SELECT * from usuarios WHERE user = :user and password = :password ");
         $query->bindValue(":user", $user);
         $query->bindValue(":password", $password);
         $query->execute();

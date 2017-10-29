@@ -11,27 +11,26 @@ class Home extends CI_Controller {
 
 	public function index() {
 
-        // if(isset($_POST["user_login"])) {
-        //     $user = addslashes($_POST["user_login"]);
-        //     $password = addslashes(md5($_POST["user_password"]));
+        if(isset($_POST["user_login"])) {
+            $user = addslashes($_POST["user_login"]);
+            $password = addslashes(md5($_POST["user_password"]));
 
-        //     $usuarios_info = $this->Tabelas->login($user, $password);
-        //     foreach($usuarios_info as $info) {
-        //         $userLogin = $info["user"];
-        //         $userPassword = $info["password"];
-        //         $_SESSION["usuario"] = $info["user"];
-        //         $_SESSION["nivel"] = $info["nivel"];
-        //         $_SESSION['id_user'] = $info['id_usuario'];
+            $usuarios_info = $this->Tabelas->login($user, $password);
+            foreach($usuarios_info as $info) {
+                $userLogin = $info["user"];
+                $userPassword = $info["password"];
+                $_SESSION["usuario"] = $info["user"];
+                $_SESSION["nivel"] = $info["nivel"];
+                $_SESSION['id_user'] = $info['id_usuario'];
 
-        //         if($user == $userLogin && $password == $userPassword) {
-        //             $_SESSION["logado"] = "true";
-        //             header("location: /home/inicio");
-        //         }else{
-        //             $_SESSION["logado"] = "false";
-        //         }
-        //     };
-        // };
-        echo "tes";
+                if($user == $userLogin && $password == $userPassword) {
+                    $_SESSION["logado"] = "true";
+                    header("location: /home/inicio");
+                }else{
+                    $_SESSION["logado"] = "false";
+                }
+            };
+        };
 		$this->load->view('login');
     }
     
