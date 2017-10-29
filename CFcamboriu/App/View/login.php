@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../Assets/css/main/login.css">
+    <link rel="stylesheet" href="/Assets/css/main/login.css">
 </head>
 <body>
     <main>
@@ -16,4 +16,3 @@
     </main>
 </body>
 </html>
-

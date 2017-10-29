@@ -7,7 +7,6 @@
     <title>CF.Camboriu</title>
     <link rel="stylesheet" href="/Assets/css/template/estilo.css">
     <script src="/Assets/js/library/jquery.js"></script>
-    <script src="/Assets/js/jsLV.js"></script>
 </head>
 <body>
     <header>
@@ -32,5 +31,6 @@
     <footer>
         <p>Todos os direitos reservador Prefeitura de Camboriú</p>
     </footer>
+    <script src="/Assets/js/main.js"></script>
 </body>
 </html>

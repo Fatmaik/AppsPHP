@@ -1,0 +1,37 @@
+main{
+    /* background: rebeccapurple; */
+    width: 100vmin;
+    margin: auto;
+}
+
+main form{
+    width: 65vmin;
+    margin: auto;
+    margin-top: 4vmin;
+    height: 40vh;
+    text-align: center;
+}
+
+main form input{
+    margin: auto;
+    text-align: center;
+    width: 45vmin;
+    height: 4vmin;
+    border-radius: 1px;
+    font-size: 2vmin;
+}
+
+main form #bt_login{
+    background-color: green;
+    color: white;
+    font-size: 3vmin;
+    padding: 1vmin;
+    width: 45vmin;
+    border-radius: 5px;
+}
+main img{
+    text-align: center;
+    margin-left: 36%;
+    margin-top: 15vmin;
+    width: 30vmin;
+}

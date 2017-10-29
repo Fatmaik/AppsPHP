@@ -5,6 +5,7 @@ class Core{
     public function run() {
         // recebe a url acessada e apaga td que estivar antes deo index.php
         $url = explode("index.php", $_SERVER["PHP_SELF"]);
+        // echo "<br>". $_SERVER["PHP_SELF"];
         // $url sera oque estiver depois de index.php
         $url = end($url);
     
@@ -34,10 +35,10 @@ class Core{
                 $params = $url;
             }
         }else{
-            $currentController = "HomeController";
+            $currentController = "homeController";
             $currentAction     = "index";
         }
-        // echo $currentController;
+        // echo "<br>".$currentController;
         // echo "<br>".$currentAction;
         // chamando o controller atual
         $c = new $currentController();
